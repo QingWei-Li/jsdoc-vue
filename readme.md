@@ -30,10 +30,10 @@ Other options see [simpletransformcode-options](https://github.com/facebookarchi
     "includePattern": ".+\\.vue|js$"
   },
   "vue": {
-    es6: true,
-    harmony: true,
-    es6module: true,
-    extension: ['vue']
+    "es6": true,
+    "harmony": true,
+    "es6module": true,
+    "extension": ["vue"]
   }
 }
 ```
