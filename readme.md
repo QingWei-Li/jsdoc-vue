@@ -20,7 +20,7 @@
   }
 }
 ```
-g
+
 # Test
 ```shell
 npm test
