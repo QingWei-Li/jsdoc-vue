@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A jsdoc plugin that parses *.vue files.",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,6 @@
   },
   "homepage": "https://github.com/QingWei-Li/jsdoc-vue#readme",
   "dependencies": {
-    "jstransform": "^11.0.3",
-    "object-assign": "^4.0.1",
     "parse5": "^2.1.5"
   },
   "devDependencies": {

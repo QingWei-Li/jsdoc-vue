@@ -20,24 +20,7 @@
   }
 }
 ```
-
-# Options
-Other options see [simpletransformcode-options](https://github.com/facebookarchive/jstransform#simpletransformcode-options)
-```json
-{
-  "plugins": ["jsdoc-vue"],
-  "source": {
-    "includePattern": ".+\\.vue|js$"
-  },
-  "vue": {
-    "es6": true,
-    "harmony": true,
-    "es6module": true,
-    "extension": ["vue"]
-  }
-}
-```
-
+g
 # Test
 ```shell
 npm test

@@ -1,20 +1,12 @@
 var parse5 = require('parse5');
-var assign = require('object-assign');
-var jstransform = require('jstransform/simple');
-var defaults = {
-  es6: true,
-  harmony: true,
-  es6module: true,
-  extension: 'vue'
-};
-var config = assign(defaults, global.env.conf.vue);
+var extension = 'vue';
 
 var allowProgress = filename => {
   var parts = filename.split('.');
   var len = parts.length;
 
   if (len) {
-    return config.extension.indexOf(parts[len - 1]) > -1;
+    return parts[len - 1] === extension;
   }
   return false;
 };
@@ -29,7 +21,7 @@ var progress = source => {
     }
   });
 
-  return jstransform.transform(script, config).code;
+  return script;
 };
 
 exports.handlers = {
