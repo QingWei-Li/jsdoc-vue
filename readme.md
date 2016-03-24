@@ -14,7 +14,7 @@
 [Configuring JSDoc with conf.json](http://usejsdoc.org/about-configuring-jsdoc.html)
 ```json
 {
-  "plugins": ["jsdoc-vue"],
+  "plugins": ["node_modules/jsdoc-vue"],
   "source": {
     "includePattern": ".+\\.vue|js$"
   }
