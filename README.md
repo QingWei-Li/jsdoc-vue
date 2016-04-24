@@ -2,12 +2,9 @@
 
 > A jsdoc plugin that parses *.vue files.
 
-# Dependencies
-[^Node 4.x](https://nodejs.org/)
-
 # Installation
 ```shell
-[sudo] npm i jsdoc-vue -D
+$ npm i jsdoc-vue -D
 ```
 
 # Usage
@@ -16,7 +13,7 @@
 {
   "plugins": ["node_modules/jsdoc-vue"],
   "source": {
-    "includePattern": ".+\\.vue|js$"
+    "includePattern": "\\.(vue|js)$"
   }
 }
 ```

@@ -1,33 +1,18 @@
-var parse5 = require('parse5');
-var extension = 'vue';
+var parse5 = require('parse5')
 
-var allowProgress = filename => {
-  var parts = filename.split('.');
-  var len = parts.length;
+var progress = function (source) {
+  var fragment = parse5.parseFragment(source)
+  var node = fragment.childNodes.find(function (node) {
+    return node.nodeName === 'script'
+  })
 
-  if (len) {
-    return parts[len - 1] === extension;
-  }
-  return false;
-};
-
-var progress = source => {
-  var fragment = parse5.parseFragment(source);
-  var script = '';
-
-  fragment.childNodes.map(node => {
-    if (node.nodeName === 'script') {
-      script = parse5.serialize(node);
-    }
-  });
-
-  return script;
-};
+  return parse5.serialize(node)
+}
 
 exports.handlers = {
-  beforeParse: e => {
-    if (allowProgress(e.filename)) {
-      e.source = progress(e.source);
+  beforeParse: function (e) {
+    if (/\.vue$/.test(e.filename)) {
+      e.source = progress(e.source)
     }
   }
-};
+}
