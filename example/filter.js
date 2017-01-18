@@ -4,6 +4,6 @@
  * @param  {string} value - input value
  * @return {string} original value
  */
-export function funny(value) {
+export default function funny(value) {
   return value;
-};
+}

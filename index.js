@@ -1,18 +1,11 @@
-var parse5 = require('parse5')
-
-var progress = function (source) {
-  var fragment = parse5.parseFragment(source)
-  var node = fragment.childNodes.find(function (node) {
-    return node.nodeName === 'script'
-  })
-
-  return parse5.serialize(node)
-}
+var compiler = require('vue-template-compiler');
 
 exports.handlers = {
   beforeParse: function (e) {
     if (/\.vue$/.test(e.filename)) {
-      e.source = progress(e.source)
+      var output = compiler.parseComponent(e.source);
+
+      e.source = output.script ? output.script.content : '';
     }
   }
-}
+};

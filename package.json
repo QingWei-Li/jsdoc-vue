@@ -4,8 +4,7 @@
   "description": "A jsdoc plugin that parses *.vue files.",
   "main": "index.js",
   "scripts": {
-    "test": "rm -rf out & jsdoc example/* -c example/conf.json",
-    "prepublish": "npm test"
+    "test": "xo && rm -rf out && jsdoc example/* -c example/conf.json"
   },
   "repository": {
     "type": "git",
@@ -15,16 +14,21 @@
     "vue",
     "jsdoc"
   ],
+  "xo": {
+    "space": true
+  },
   "author": "qingwei-li",
   "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/QingWei-Li/jsdoc-vue/issues"
   },
   "homepage": "https://github.com/QingWei-Li/jsdoc-vue#readme",
-  "dependencies": {
-    "parse5": "^2.1.5"
+  "peerDependencies": {
+    "vue-template-compiler": "*"
   },
   "devDependencies": {
-    "jsdoc": "^3.4.0"
+    "jsdoc": "^3.4.0",
+    "vue-template-compiler": "^2.1.10",
+    "xo": "^0.17.1"
   }
 }
