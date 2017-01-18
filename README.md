@@ -5,13 +5,13 @@
 
 > A jsdoc plugin that parses *.vue files.
 
-# Installation
+## Installation
 ```shell
 yarn add jsdoc-vue vue-template-compiler --dev
 # npm i jsdoc-vue vue-template-compiler -D
 ```
 
-# Usage
+## Usage
 [Configuring JSDoc with conf.json](http://usejsdoc.org/about-configuring-jsdoc.html)
 ```json
 {
@@ -22,7 +22,11 @@ yarn add jsdoc-vue vue-template-compiler --dev
 }
 ```
 
-# Test
+## Test
 ```shell
 npm test
 ```
+
+
+## License
+WTFPL
