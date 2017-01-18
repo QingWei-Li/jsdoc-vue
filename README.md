@@ -8,7 +8,7 @@
 # Installation
 ```shell
 yarn add jsdoc-vue vue-template-compiler --dev
-# $ npm i jsdoc-vue vue-template-compiler -D
+# npm i jsdoc-vue vue-template-compiler -D
 ```
 
 # Usage
